@@ -7,6 +7,13 @@ var { Modal, StyleSheet, TouchableOpacity, View} = React;
 
 var ActionModal = React.createClass({
   render: function() {
+      var actionButton = null;
+      if (this.props.actionButtonText) {
+          actionButton = (
+              <Button onPress={this.props.onAction} text={this.props.actionButtonText} />
+          );
+      }
+
     return (
       <FadeInView visible={this.props.modalVisible} backgroundColor={this.props.backgroundColor}>
         <Modal
@@ -17,6 +24,7 @@ var ActionModal = React.createClass({
             <TouchableOpacity style={styles.container} onPress={this.props.onCancel}></TouchableOpacity>
             {this.props.children}
             <View style={{height:8}}/>
+            {actionButton}
             <Button onPress={this.props.onDone || this.props.onCancel} text={this.props.buttonText || "Done"} />
           </View>
         </Modal>
