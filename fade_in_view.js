@@ -22,7 +22,8 @@ var FadeInView = React.createClass({
     return (
       <Animated.View style={[styles.overlay,
           {opacity: this.state.fadeAnim},
-          {backgroundColor: this.props.backgroundColor || 'black' }
+          {backgroundColor: this.props.backgroundColor || 'black' },
+          {width: this.props.visible ? window.width : 0}
         ]}>
         {this.props.children}
       </Animated.View>
