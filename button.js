@@ -17,14 +17,14 @@ var Button = React.createClass({
 
 var styles = StyleSheet.create({
   buttonText: {
-    color: '#FFD34E',
+    color: '#105B63',
     alignSelf: 'center',
     fontSize: 18
   },
   button: {
     height: 36,
-    backgroundColor: '#105B63',
-    borderColor: '#105B63',
+    backgroundColor: '#FFD34E',
+    borderColor: '#FFD34E',
     borderWidth: 1,
     borderRadius: 6,
     marginBottom: 10,
